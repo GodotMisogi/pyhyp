@@ -28,11 +28,8 @@ CGNS_LINKER_FLAGS=-L$(HOME)/packages/cgnslib_3.2.1/src -lcgns
 # CGNS_LINKER_FLAGS=-L$(HOME)/packages/CGNS/src/lib -lcgns
 
 # ------- Define Compiler Flags ----------------------------------------
-FF90_GEN_FLAGS = -fPIC
-CC_GEN_FLAGS   = -fPIC
-
-FF90_OPT_FLAGS   =  -fPIC -fdefault-real-8 -O2
-CC_OPT_FLAGS     = -O2
+FF90_GEN_FLAGS = -DHAS_ISNAN  -fPIC -fdefault-real-8 -fdefault-double-8 -g  -O3 -march=native -ffast-math
+CC_GEN_FLAGS   = -DHAS_ISNAN  -O -fPIC -g
 
 # ------- Define Linker Flags ------------------------------------------
 LINKER_FLAGS =
